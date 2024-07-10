@@ -34,7 +34,7 @@ function App() {
       mqttClient.publish(
         "testing/nabila",
         JSON.stringify(payload),
-        { qos: 0 },
+        { qos: 0, retain: true },
         (error) => {
           if (error) {
             console.log("Publish error: ", error);
