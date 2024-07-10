@@ -20,9 +20,7 @@ function App() {
         const json = JSON.parse(message.toString());
         console.log(json);
 
-        setMessages((prevMessages: any) => {
-          return json;
-        });
+        setMessages(json);
       }
     });
   }, []);
@@ -60,12 +58,12 @@ function App() {
           return (
             <div key={key} className="bg-gray-200 p-10">
               <p> {key}</p>
-              <p> {messages[key].state ? "Active" : "Non Active"}</p>
+              <p> {value.state ? "Active" : "Non Active"}</p>
               <button
                 onClick={() => mqttPublish(key)}
                 className="bg-blue-400 px-2 py-1 rounded-sm mt-5"
               >
-                {messages[key].state ? "Set Non Active" : "Set Active"}
+                {value.state ? "Set Non Active" : "Set Active"}
               </button>
             </div>
           );
