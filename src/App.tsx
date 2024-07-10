@@ -46,8 +46,10 @@ function App() {
 
   return (
     <div className="container mx-auto pt-10">
-      <div className="flex">
-        <p className="my-2 text-[30px] font-bold">MQTT CONTROL Prototype</p>
+      <div className="flex p-5 md:p-0">
+        <p className="my-2 md:text-[30px] text-[20px] font-bold">
+          MQTT KONTOL Prototype
+        </p>
         <svg height="30" width="30" xmlns="http://www.w3.org/2000/svg">
           <circle r="10" cx="15" cy="15" fill={isConnected ? "green" : "red"} />
         </svg>
